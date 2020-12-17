@@ -1,0 +1,20 @@
+{% extends "design/main.html" %} {% block content %}
+
+<br>
+
+<form action="" method="post" autocomplete="off">
+
+    <tr>
+        {% csrf_token %}
+        <td>Name: {{form.name}}</td>
+        <td>Phone: {{form.phone}}</td>
+        <td>Email: {{form.email}}</td>
+        <td>
+
+            <button type="submit" class="btn btn-success"><i class="fas fa-database"></i> Submit</button>
+        </td>
+
+    </tr>
+
+</form>
+{% endblock content %}

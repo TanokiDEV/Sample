@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+
+<body>
+
+
+    {% block content %}
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" style="color:aliceblue" href="{% url 'menu' %}">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" style="color:aliceblue"><span class="sr-only">(current)</span></a>
+                </li>
+
+
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <h1 class="display-4">Employee List</h1>
+    <p class="lead font-italic">Powered by RCFigueora</p>
+
+
+
+
+    <table class="table table-borderless">
+        <thead class="border-bottom font-weight-bold">
+            <tr>
+                <td>Full Name</td>
+                <td>Gender</td>
+                <td>Age</td>
+                <td>Email</td>
+                <td>Date/Time Created</td>
+                <td>Mobile Number</td>
+                <td>Employee Code</td>
+                <td>Position</td>
+                <td>
+
+                </td>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for employee in employee_list %}
+            <tr>
+                <td>{{employee.fullname}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.age}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.date_created}}</td>
+                <td>{{employee.mobile}}</td>
+                <td>{{employee.emp_code}}</td>
+                <td>{{employee.position}}</td>
+                <td>
+
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock content %}
+</body>
+
+</html>

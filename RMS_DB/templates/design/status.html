@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+<br>
+
+
+
+<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    <a href="{% url 'employee_list2_user' %} " class="btn btn-secondary">
+        <i class="fas fa-lock-open"> Employee View</i></a>
+</div>
+
+<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    <a href="{% url 'employee_list' %} " class="btn btn-secondary">
+        <i class="fas fa-user-lock"> Employee Edit</i></a>
+</div>
+
+<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    <a type="button" class="btn btn-secondary" href="{% url 'form' %}"><i class="fas fa-user-lock"> Employee Register</i></a>
+</div>
+
+<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    <a href="{% url 'products' %}" class="btn btn-secondary">
+        <i class="fas fa-user-lock"> Insert New Product</i></a>
+</div>
+
+
+<br>
+<br>
+<div class="row">
+    <div class="col-3">
+        <div class="col-md">
+            <div class="card text-center text-white  mb-3" id="total-orders">
+                <div class="card-header">
+                    <h5 class="card-title">Total Orders</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">{{total_orders}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="col-md">
+            <div class="card text-center text-white  mb-3" id="orders-delivered">
+                <div class="card-header">
+                    <h5 class="card-title">Orders Delivered</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">{{delivered}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="col-md">
+            <div class="card text-center text-white  mb-3" id="orders-outfordelivery">
+                <div class="card-header">
+                    <h5 class="card-title">Out For Delivery</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">{{out_for_delivery}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="col-md">
+            <div class="card text-center text-white  mb-3" id="orders-pending">
+                <div class="card-header">
+                    <h5 class="card-title">Orders Pending</h5>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">{{pending}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

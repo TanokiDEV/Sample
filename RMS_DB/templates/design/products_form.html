@@ -1,0 +1,26 @@
+{% extends 'design/main.html' %} {% load static %} {% block content %}
+
+<br>
+
+<div class="row">
+    <div class="col-md-9">
+        <div class="card card-body">
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                <td>Name: {{form.name}}</td>
+                <td>Category: {{form.category}}</td>
+                <td>Price: {{form.price}}</td>
+                <td>Description: {{form.description}}</td>
+                <td>Tag: {{form.tag}}</td>
+
+                <input type="submit" name="Submit">
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
